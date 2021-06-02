@@ -1,0 +1,68 @@
+.right{
+    height: fit-content;
+    width: 15vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--back-colour);
+
+    box-shadow: -1rem 0 1rem .3rem rgba(0, 0, 0, 0.1);
+}
+
+#image--container{
+    overflow: scroll;
+    height: fit-content;
+    min-height: 90vh;
+    width: fit-content;
+
+    margin-top: 7rem;
+
+    transition: all .2s;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.img--element{
+    height: auto;
+    width: auto;
+    position: relative;
+    cursor: pointer;
+    margin: .7rem;
+}
+
+.img--camera{
+    width: 10.5vw;
+    height: auto;
+    overflow: hidden;
+
+    transition: all .5s;
+    z-index: 2;
+    border: .15rem solid transparent;
+}
+.img--element:hover > .img--camera{
+    filter: brightness(50%) grayscale(80%);
+    border: .15rem solid var(--colour-secondary);
+}
+
+.img--text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all .5s;
+    color: transparent;
+    font-size: .9rem;
+    font-weight: 400;
+    z-index: 3;
+}
+.img--element:hover > .img--text{
+    color: var(--colour-secondary);
+    mix-blend-mode: lighten;
+}

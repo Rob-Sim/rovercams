@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --colour-primary: rgb(15, 78, 64);
+    /* --colour-secondary: rgb(184, 158, 67); */
+    --colour-secondary: rgb(153, 135, 71);
+    --back-colour:rgb(5, 53, 45);
+    --box-shadow: 0 0 1rem .7rem rgba(0, 0, 0, 0.1);
+}
+
+body{
+    width: 100vw;
+    height: max-content;
+    background-color: rgb(15, 78, 64)
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#canvasCont{
+    position: fixed;
+    background-color: var(--back-colour);
+    right: 15vw;
+    bottom: 0;
+    width: 25%;
+    height: 25%;
+    /* border: 2px solid black; */
+    cursor: grab;
+
+    /* color: #ddb280; */
+}
+canvas{
+    position: fixed;
+}
+
+#canvasCont:active{
+    cursor: grabbing;
+}

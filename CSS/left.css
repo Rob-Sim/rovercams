@@ -1,0 +1,88 @@
+.left{
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.slide--container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--back-colour);
+    box-shadow: .8rem .8rem 1rem .6rem rgba(0, 0, 0, 0.2);
+
+    width: 70%;
+    height: 70%;
+}
+#POTDslide{
+    border: 1px solid var(--colour-secondary);
+    max-height: 85%;
+    max-width: 70%;
+
+    transition: all .1s;
+}
+
+#info{
+    position: absolute;
+    left: 1vw;
+    top: 1vw;   
+    color: var(--colour-secondary);
+    background-color: var(--back-colour);
+    border: .07rem solid var(--colour-secondary);
+    height: auto;
+    width: 14%;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    z-index: 10;
+    font-weight: 400;
+    font-size: .7vw;
+    border-radius: 10px;
+}
+
+.marsBold{
+    color: beige;
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.2vw;
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    text-decoration: line-through;
+    z-index: 5;
+    cursor: default;
+
+    position: absolute;
+    left: 0;
+    margin-left: 10%;
+}
+
+.weather--container{
+    position: absolute;
+    left: 1vw;
+    bottom: 1vw;
+    color: var(--colour-secondary);
+    background-color: var(--back-colour);
+    border: .07rem solid var(--colour-secondary);
+    height: auto;
+    width: auto;
+    padding: 1.9rem 1rem;
+    z-index: 13;
+    box-shadow: var(--box-shadow);
+}
+.weather--container > *{
+    font-size: .7vw;
+    font-weight: 700;
+}
+
+.lineBot{
+    border-bottom: .1rem solid var(--colour-secondary);
+    padding-bottom: .2rem;
+    margin-bottom: .2rem;
+    /* color: red; */
+}

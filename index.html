@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rovers</title>
+
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <div class="left" id="left--cont">
+        <p id="info">
+            Displays the most recent picture of each camera present on the selected rover on the selected SOL
+        </p>
+
+        <div class="slide--container">
+            <img id="POTDslide"></img>
+            <h1 class="marsBold">mars</h1>
+        </div>
+
+        <div class="weather--container">
+            <h1 class="lineBot">Date: <span id="date"></span></h1>
+            <h1>Min temp: <span id="temp--min"></span>&#730;C</h1>
+            <h1 class="lineBot">Max temp: <span id="temp--max"></span>&#730;C</h1>
+            <h1>Weather: <span id="weather"></span></h1>
+            <h1 class="lineBot">Season: <span id="season"></span></h1>
+            <h1>Sunrise: <span id="sunrise"></span></h1>
+            <h1 class="lineBot">Sunset: <span id="sunset"></span></h1>
+            <h1>Pressure: 
+                <span id="pressure--num"></span>atm - 
+                <span id="pressure--string"></span>
+            </h1>
+        </div>
+    </div>
+
+    <div id="canvasCont"></div>
+
+    <div class="right">
+        <div class="selector">
+            <div class="selector--container">
+                <select name="Rover" id="rover--select" onchange="rover(this.value)"></select>
+    
+                <div class="solSelect--container">
+                    <input type="number" id="inputSol" onchange="solInpFunc()">
+                </div>
+            </div>
+            <div class="dayDisplay--container">
+                <h1> DATE:  <span id="date--display"></span></h1>
+                <h1> SOL:  <span id="sol--display"></span> / <span id="max--display"></span></h1></h1>
+            </div>
+        </div>
+        <div id="image--container"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="scripts/roverMod.js"></script>
+    
+    <script src="scripts/roverPictures.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
